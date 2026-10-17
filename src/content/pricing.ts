@@ -41,7 +41,7 @@ export const pricingPlans: PricingPlan[] = [
       { text: "Knows your family — better-tuned than external AI", included: true },
       { text: "Smart weekly planning with the Chef", included: true },
     ],
-    cta: { label: "Join Early Access", href: site.appUrl },
+    cta: { label: "Get started", href: site.appUrl },
     recommended: true,
   },
 ];

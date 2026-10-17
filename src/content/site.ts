@@ -17,6 +17,7 @@ export const legal = {
 export type NavLink = { label: string; href: string };
 
 export const mainNav: NavLink[] = [
+  { label: "How it works", href: "/#how-it-works" },
   { label: "About", href: "/about" },
   { label: "Pricing", href: "/#pricing" },
   { label: "FAQ", href: "/faq" },
@@ -52,6 +53,7 @@ export const routes = {
   login: site.appUrl,
   join: site.appUrl,
   chef: "/#chef",
+  howItWorks: "/#how-it-works",
   pricing: "/#pricing",
   contact: "/contact",
   privacy: "/privacy",

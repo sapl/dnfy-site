@@ -132,3 +132,91 @@ export function CloseIcon({ color = "currentColor", ...props }: IconProps) {
     </svg>
   );
 }
+
+/** Two people — family profile. */
+export function UsersIcon({ color = "var(--green)", ...props }: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <circle cx="9" cy="8.5" r="3.2" stroke={color} strokeWidth={1.8} />
+      <path d="M3.5 19.5a5.5 5.5 0 0 1 11 0" stroke={color} strokeWidth={1.8} strokeLinecap="round" />
+      <path d="M15.5 5.6a3 3 0 0 1 0 5.8M17.5 14.2a5.2 5.2 0 0 1 3 5.3" stroke={color} strokeWidth={1.8} strokeLinecap="round" />
+    </svg>
+  );
+}
+
+/** Open book — family menu / recipes. */
+export function BookIcon({ color = "var(--green)", ...props }: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <path
+        d="M12 6.5C10.3 5.3 7.8 4.8 4 5v13c3.8-.2 6.3.3 8 1.5 1.7-1.2 4.2-1.7 8-1.5V5c-3.8-.2-6.3.3-8 1.5Z"
+        stroke={color}
+        strokeWidth={1.8}
+        strokeLinejoin="round"
+      />
+      <path d="M12 6.5v13" stroke={color} strokeWidth={1.8} />
+    </svg>
+  );
+}
+
+/** Calendar — meal plan. */
+export function CalendarIcon({ color = "var(--green)", ...props }: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <rect x="4" y="5.5" width="16" height="14.5" rx="2.5" stroke={color} strokeWidth={1.8} />
+      <path d="M4 10h16M8.5 3.5v4M15.5 3.5v4" stroke={color} strokeWidth={1.8} strokeLinecap="round" />
+      <path d="M8 14h2M14 14h2M8 17h2" stroke={color} strokeWidth={1.8} strokeLinecap="round" />
+    </svg>
+  );
+}
+
+/** Wallet — spending & budget. */
+export function WalletIcon({ color = "var(--green)", ...props }: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <path d="M17 7V5.5A1.5 1.5 0 0 0 15.5 4H6a2 2 0 0 0-2 2" stroke={color} strokeWidth={1.8} strokeLinecap="round" />
+      <rect x="4" y="7" width="16" height="13" rx="2.5" stroke={color} strokeWidth={1.8} />
+      <path d="M20 11.5h-3.5a2 2 0 0 0 0 4H20" stroke={color} strokeWidth={1.8} strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+/** Sparkle — AI. */
+export function SparkIcon({ color = "var(--green)", ...props }: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <path
+        d="M12 3.5c.6 4.3 2.2 5.9 6.5 6.5-4.3.6-5.9 2.2-6.5 6.5-.6-4.3-2.2-5.9-6.5-6.5 4.3-.6 5.9-2.2 6.5-6.5Z"
+        stroke={color}
+        strokeWidth={1.8}
+        strokeLinejoin="round"
+      />
+      <path d="M18.5 16v4M16.5 18h4" stroke={color} strokeWidth={1.6} strokeLinecap="round" />
+    </svg>
+  );
+}
+
+/** Supermarket cart — shopping list. */
+export function CartIcon({ color = "var(--green)", ...props }: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <path
+        d="M3 4h2.2l2.3 10.6a1.5 1.5 0 0 0 1.5 1.2h8.2a1.5 1.5 0 0 0 1.4-1.1L20.5 8H6.2"
+        stroke={color}
+        strokeWidth={1.8}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="9.5" cy="19.5" r="1.4" fill={color} />
+      <circle cx="17" cy="19.5" r="1.4" fill={color} />
+    </svg>
+  );
+}
+
+export function ArrowDownIcon({ color = "currentColor", ...props }: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <path d="M12 5v14M6 13l6 6 6-6" stroke={color} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}

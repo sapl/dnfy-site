@@ -1,12 +1,8 @@
 import Image from "next/image";
 import { FeatureCard } from "@/components/shared/FeatureCard";
-import { MonthCalendar } from "@/components/shared/MonthCalendar";
 import { CheckIcon, CrossIcon } from "@/components/ui/Icons";
-import { sampleMonth } from "@/content/calendar";
 import { planningFeatures } from "@/content/features";
 import styles from "./IdeaSection.module.css";
-
-const toneClass = { brand: styles.brand, ink: styles.ink, accent: styles.accentTone } as const;
 
 export function IdeaSection() {
   return (
@@ -27,7 +23,7 @@ export function IdeaSection() {
                 src="/images/cooking-enthusiast.png"
                 alt="A woman happily cooking in a bright kitchen"
                 fill
-                sizes="172px"
+                sizes="297px"
                 style={{ objectFit: "cover", objectPosition: "center 28%" }}
               />
             </div>
@@ -48,7 +44,7 @@ export function IdeaSection() {
                 src="/images/busy-family.png"
                 alt="A tired family in the kitchen in the evening"
                 fill
-                sizes="172px"
+                sizes="297px"
                 style={{ objectFit: "cover", objectPosition: "center 22%" }}
               />
             </div>
@@ -72,29 +68,6 @@ export function IdeaSection() {
           ))}
         </div>
 
-        <div className={styles.result}>
-          <div>
-            <div className="eyebrow">The result</div>
-            <h3 className={`hdl ${styles.resultTitle}`}>Free evenings and a calendar you can trust.</h3>
-            <p className={styles.resultText}>
-              Whole days off the kitchen, marked right on the plan. No more{" "}
-              <span className={styles.strike}>“What’s for dinner today?”</span> — she already knows.
-            </p>
-            <div className={styles.stats}>
-              {sampleMonth.stats.map((s) => (
-                <div key={s.value + s.label[0]} className={styles.stat}>
-                  <span className={`hdl ${styles.statValue} ${toneClass[s.tone]}`}>{s.value}</span>
-                  <span className={styles.statLabel}>
-                    {s.label[0]}
-                    <br />
-                    {s.label[1]}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <MonthCalendar />
-        </div>
       </div>
     </section>
   );

@@ -65,7 +65,7 @@ export function Header() {
             Log In
           </ButtonLink>
           <ButtonLink href={routes.join} variant="primary" size="md">
-            Early Access
+            Get started
           </ButtonLink>
         </div>
       </div>

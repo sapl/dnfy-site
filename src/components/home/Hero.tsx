@@ -25,9 +25,9 @@ export function Hero() {
           </p>
           <div className={styles.actions}>
             <ButtonLink href={routes.join} size="lg">
-              Join Early Access
+              Get started
             </ButtonLink>
-            <ButtonLink href={routes.chef} variant="ghost" size="lg">
+            <ButtonLink href={routes.howItWorks} variant="ghost" size="lg">
               See how it works
               <ArrowRightIcon size={16} />
             </ButtonLink>

@@ -20,7 +20,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "When can I start using Dinify?",
-        a: "Right now. Dinify is in Early Access — open app.dinify.me, sign in with Google and the Chef will set up your family in a 2-minute chat.",
+        a: "Right now — Dinify is live. Open app.dinify.me, sign in with Google and the Chef will set up your family in a 2-minute chat.",
       },
     ],
   },
