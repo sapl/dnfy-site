@@ -1,0 +1,222 @@
+.card {
+  background: var(--bg-mint);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-xl);
+  padding: 22px 22px 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.title {
+  font-size: 23px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.chips {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.chipReady {
+  background: var(--bg-mint-strong);
+  color: var(--green-dark);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 11px;
+  border-radius: var(--r-pill);
+  display: flex;
+  align-items: center;
+}
+
+.chipPerson {
+  background: var(--surface);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 11px 5px 6px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--line-3);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chipPerson img {
+  margin: -2px 0 -2px -2px;
+}
+
+.days {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 44px 1fr 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.date {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+.date span {
+  color: var(--text-4);
+  font-weight: 600;
+}
+
+.today {
+  font-size: 12px;
+  font-weight: 800;
+  color: #fff;
+  background: var(--green);
+  border-radius: 9px;
+  padding: 6px 4px;
+  text-align: center;
+  line-height: 1.15;
+}
+
+.slot {
+  background: var(--surface);
+  border-radius: 13px;
+  padding: 13px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.thumb {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  flex: none;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-mint-strong);
+}
+
+.thumb i {
+  position: absolute;
+  left: 8px;
+  top: 14px;
+  width: 22px;
+  height: 22px;
+  border-radius: 99px;
+}
+
+.peach {
+  background: var(--cream);
+}
+.peach i {
+  background: var(--peach);
+}
+.pink {
+  background: var(--pink);
+}
+.pink i {
+  background: var(--pink-strong);
+}
+.butter {
+  background: var(--butter);
+}
+.butter i {
+  background: var(--butter-strong);
+}
+
+.text {
+  min-width: 0;
+  flex: 1;
+}
+
+.meal {
+  font-size: 10.5px;
+  color: var(--text-4);
+}
+
+.name {
+  font-weight: 700;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.note {
+  font-size: 11px;
+  color: var(--text-4);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.accent {
+  color: var(--orange);
+  font-weight: 700;
+}
+.strong {
+  color: var(--text);
+  font-weight: 700;
+}
+.brand {
+  color: var(--green);
+  font-weight: 700;
+}
+
+@media (max-width: 520px) {
+  .card {
+    padding: 16px 14px 18px;
+    border-radius: 20px;
+  }
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .chips {
+    justify-content: flex-start;
+  }
+  .row {
+    grid-template-columns: 36px 1fr 1fr;
+    gap: 8px;
+  }
+  .slot {
+    padding: 10px 9px;
+    gap: 8px;
+  }
+  .thumb {
+    width: 28px;
+    height: 28px;
+  }
+  .slot > img {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .thumb {
+    display: none;
+  }
+}

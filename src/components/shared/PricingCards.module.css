@@ -1,0 +1,128 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: left;
+  align-items: stretch;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line-3);
+  border-radius: var(--r-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.recommended {
+  background: var(--bg-mint);
+  border: 2px solid var(--green);
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--green);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 5px 11px;
+  border-radius: var(--r-pill);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+.recommended .name {
+  color: var(--green-dark);
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.price {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.period {
+  font-size: 14px;
+  color: var(--text-2);
+  font-weight: 600;
+}
+
+.desc {
+  font-size: 14px;
+  color: var(--text-2);
+  margin: 0 0 22px;
+  line-height: 1.5;
+}
+.recommended .desc {
+  color: var(--text);
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.features li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 14.5px;
+  color: var(--ink-2);
+}
+
+.features svg {
+  margin-top: 1px;
+  flex: none;
+}
+
+.excluded {
+  color: var(--text-4) !important;
+  text-decoration: line-through;
+  text-decoration-color: var(--red);
+}
+
+.footnote {
+  font-size: 13px;
+  color: var(--text-2);
+  margin: 16px 0 0;
+  line-height: 1.5;
+}
+.footnote strong {
+  color: var(--ink);
+}
+
+.cta {
+  margin-top: auto;
+  padding-top: 26px;
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 26px 22px;
+  }
+}

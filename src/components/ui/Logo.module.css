@@ -1,0 +1,17 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: inherit;
+}
+.logo:hover {
+  color: inherit;
+}
+.mark {
+  border-radius: 28%;
+  overflow: hidden;
+  flex: none;
+}
+.word {
+  font-weight: 700;
+}

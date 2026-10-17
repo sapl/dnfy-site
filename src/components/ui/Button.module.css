@@ -1,0 +1,88 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: var(--r-pill);
+  font-weight: 600;
+  line-height: 1.2;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* sizes */
+.sm {
+  padding: 10px 20px;
+  font-size: 14.5px;
+}
+.md {
+  padding: 12px 24px;
+  font-size: 15px;
+}
+.lg {
+  padding: 15px 30px;
+  font-size: 16px;
+}
+.block {
+  width: 100%;
+}
+
+/* variants */
+.primary {
+  background: var(--green);
+  color: #fff;
+}
+.primary:hover {
+  background: var(--green-dark);
+  color: #fff;
+}
+
+.dark {
+  background: var(--ink);
+  color: #fff;
+}
+.dark:hover {
+  background: #26352c;
+  color: #fff;
+}
+
+.outline {
+  background: transparent;
+  border-color: var(--green);
+  color: var(--green-dark);
+}
+.outline:hover {
+  background: var(--bg-mint-strong);
+  color: var(--green-hover);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--ink);
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.ghost:hover {
+  color: var(--green-dark);
+}
+.ghost svg {
+  transition: transform 0.15s ease;
+}
+.ghost:hover svg {
+  transform: translateX(3px);
+}

@@ -1,0 +1,85 @@
+.section {
+  background: var(--bg-mint);
+  border-top: 1px solid var(--line-1);
+}
+
+.inner {
+  padding-top: 56px;
+  padding-bottom: 84px;
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  gap: 56px;
+  align-items: center;
+}
+
+.title {
+  font-size: 42px;
+  line-height: 1.05;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
+.lead {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 28px;
+  max-width: 470px;
+}
+
+.memo {
+  background: var(--surface);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-md);
+  padding: 20px 22px;
+  max-width: 514px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.memoBadge {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--r-sm);
+  background: var(--bg-mint-strong);
+  color: var(--green-dark);
+  font-weight: 800;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.memo p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--text);
+}
+.memo strong {
+  color: var(--ink);
+}
+
+.phone {
+  justify-self: center;
+  align-self: end;
+  margin-bottom: -84px;
+}
+
+@media (max-width: 1100px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 32px;
+  }
+  .lead {
+    font-size: 16.5px;
+  }
+}

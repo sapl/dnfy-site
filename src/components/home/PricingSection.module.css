@@ -1,0 +1,28 @@
+.section {
+  background: var(--bg-sand);
+  border-top: 1px solid var(--line-1);
+}
+
+.inner {
+  padding-top: 84px;
+  padding-bottom: 84px;
+  text-align: center;
+}
+
+.title {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0 auto 44px;
+  max-width: 520px;
+}
+
+@media (max-width: 640px) {
+  .inner {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+}

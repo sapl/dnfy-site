@@ -1,0 +1,132 @@
+.wrap {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-mint);
+}
+
+.citrus {
+  position: absolute;
+  left: -30px;
+  top: 40px;
+  opacity: 0.45;
+  transform: rotate(-12deg);
+  pointer-events: none;
+}
+
+.carrot {
+  position: absolute;
+  right: -14px;
+  bottom: -52px;
+  opacity: 0.5;
+  transform: rotate(24deg);
+  pointer-events: none;
+}
+
+.fork {
+  position: absolute;
+  left: 9%;
+  bottom: -56px;
+  opacity: 0.22;
+  transform: rotate(-6deg);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 96px var(--gutter) 120px;
+  text-align: center;
+}
+
+.title {
+  font-size: 54px;
+  line-height: 1.02;
+  font-weight: 700;
+  margin: 0 0 18px;
+}
+
+.lead {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 auto 40px;
+  max-width: 520px;
+}
+
+.card {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-xl);
+  padding: 22px 30px 22px 22px;
+  box-shadow: var(--shadow-card);
+  color: var(--ink);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--bg-mint-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.label {
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 3px;
+}
+
+.email {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--green-dark);
+}
+
+@media (max-width: 640px) {
+  .inner {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+  .title {
+    font-size: 38px;
+  }
+  .lead {
+    font-size: 17px;
+  }
+  .card {
+    padding: 18px 20px 18px 16px;
+    gap: 14px;
+  }
+  .icon {
+    width: 46px;
+    height: 46px;
+  }
+  .email {
+    font-size: 20px;
+  }
+  .citrus,
+  .fork {
+    display: none;
+  }
+}

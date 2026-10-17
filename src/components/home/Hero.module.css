@@ -1,0 +1,123 @@
+.hero {
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.citrus {
+  position: absolute;
+  left: -26px;
+  top: 38px;
+  opacity: 0.5;
+  transform: rotate(-12deg);
+}
+.herb {
+  position: absolute;
+  left: 64%;
+  top: -30px;
+  opacity: 0.42;
+  transform: rotate(8deg);
+}
+.fork {
+  position: absolute;
+  left: 9%;
+  bottom: -56px;
+  opacity: 0.32;
+  transform: rotate(-6deg);
+}
+.carrot {
+  position: absolute;
+  right: -14px;
+  bottom: -52px;
+  opacity: 0.55;
+  transform: rotate(24deg);
+}
+
+.inner {
+  padding-top: 72px;
+  padding-bottom: 128px;
+  display: grid;
+  grid-template-columns: 1fr 580px;
+  gap: 56px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 60px;
+  line-height: 1;
+  font-weight: 700;
+  margin: 0 0 22px;
+}
+
+.lead {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 34px;
+  max-width: 480px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.note {
+  font-size: 13.5px;
+  color: var(--text-3);
+  font-weight: 500;
+}
+
+@media (max-width: 1100px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding-top: 56px;
+    padding-bottom: 88px;
+  }
+  .herb {
+    left: auto;
+    right: 6%;
+  }
+  .copy {
+    max-width: 640px;
+  }
+  .visual {
+    max-width: 620px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .inner {
+    padding-top: 36px;
+    padding-bottom: 64px;
+  }
+  .title {
+    font-size: 42px;
+  }
+  .lead {
+    font-size: 17px;
+    margin-bottom: 26px;
+  }
+  .citrus,
+  .fork {
+    display: none;
+  }
+}

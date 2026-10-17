@@ -1,0 +1,135 @@
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.toc {
+  position: sticky;
+  top: 104px;
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
+}
+
+.tocTitle {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 10px;
+}
+
+.toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  counter-reset: toc;
+}
+
+.toc li {
+  counter-increment: toc;
+}
+
+.toc a {
+  display: flex;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 9px;
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text);
+}
+
+.toc a::before {
+  content: counter(toc) ".";
+  color: var(--text-4);
+  min-width: 18px;
+}
+
+.toc a:hover {
+  background: var(--bg-mint-strong);
+  color: var(--green-dark);
+}
+
+.content {
+  min-width: 0;
+  max-width: 800px;
+}
+
+.content > div:last-child {
+  margin-left: 0;
+  max-width: none;
+}
+
+.summary {
+  background: var(--bg-mint);
+  border: 1px solid var(--green-200);
+  border-radius: var(--r-lg);
+  padding: 24px 26px;
+  margin-bottom: 40px;
+}
+
+.summaryTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.summary ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.summary li {
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+
+.summary svg {
+  flex: none;
+  margin-top: 3px;
+}
+
+.section {
+  scroll-margin-top: 100px;
+}
+
+.section + .section {
+  border-top: 1px solid var(--line-2);
+  margin-top: 36px;
+  padding-top: 4px;
+}
+
+.note {
+  margin-top: 48px;
+  font-size: 13.5px;
+  color: var(--text-3);
+}
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .toc {
+    position: static;
+    max-height: none;
+    background: var(--surface);
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-md);
+    padding: 16px;
+  }
+}

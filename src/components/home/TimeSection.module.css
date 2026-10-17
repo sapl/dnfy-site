@@ -1,0 +1,57 @@
+.section {
+  background: var(--bg-mint-strong);
+  border-top: 1px solid var(--line-1);
+  position: relative;
+  overflow: hidden;
+}
+
+.citrus {
+  position: absolute;
+  left: 6%;
+  top: 24px;
+  opacity: 0.4;
+  transform: rotate(-10deg);
+  pointer-events: none;
+}
+
+.herb {
+  position: absolute;
+  right: 7%;
+  bottom: -14px;
+  opacity: 0.42;
+  transform: rotate(-14deg);
+  pointer-events: none;
+}
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 72px 40px;
+  text-align: center;
+  position: relative;
+}
+
+.eyebrow {
+  color: var(--green-dark);
+  margin-bottom: 18px;
+}
+
+.text {
+  font-size: 30px;
+  line-height: 1.35;
+  font-weight: 600;
+  margin: 0;
+  color: var(--ink);
+}
+
+@media (max-width: 640px) {
+  .inner {
+    padding: 56px 20px;
+  }
+  .text {
+    font-size: 22px;
+  }
+  .citrus {
+    left: -20px;
+  }
+}

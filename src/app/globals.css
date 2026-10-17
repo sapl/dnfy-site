@@ -1,0 +1,172 @@
+/* ===== Design tokens (from Claude Design export) ===== */
+:root {
+  /* surfaces */
+  --bg: #fbfbf8;
+  --bg-sand: #f5f4ee;
+  --bg-mint: #f1f8f3;
+  --bg-mint-strong: #e7f3ea;
+  --bg-chip: #f1f1ec;
+  --bg-cell: #f7f7f3;
+  --surface: #ffffff;
+
+  /* text */
+  --ink: #16211b;
+  --ink-2: #2a332e;
+  --text: #4a5450;
+  --text-2: #6b726e;
+  --text-3: #8a928d;
+  --text-4: #9aa29d;
+
+  /* brand */
+  --green: #2f9e5b;
+  --green-dark: #1e7a43;
+  --green-hover: #166134;
+  --green-200: #bee0c6;
+  --green-300: #8fcba3;
+  --green-dot: #cde0d4;
+
+  /* accents */
+  --cream: #fbeedc;
+  --peach: #f1ce9e;
+  --orange: #c77a2a;
+  --orange-line: #e28e3c;
+  --red: #c0645b;
+  --pink: #fce3e8;
+  --pink-strong: #f3c3cf;
+  --butter: #fbf3d6;
+  --butter-strong: #efe0a0;
+
+  /* lines & shadows */
+  --line-1: rgba(20, 40, 25, 0.05);
+  --line-2: rgba(20, 40, 25, 0.07);
+  --line-3: rgba(20, 40, 25, 0.08);
+  --shadow-card: 0 30px 60px -30px rgba(20, 40, 25, 0.4);
+  --shadow-soft: 0 26px 54px -30px rgba(20, 40, 25, 0.4);
+
+  /* radii */
+  --r-sm: 11px;
+  --r-md: 16px;
+  --r-lg: 20px;
+  --r-xl: 24px;
+  --r-pill: 99px;
+
+  /* layout */
+  --container: 1280px; /* 1200px content + 2 × 40px gutter */
+  --gutter: 40px;
+
+  --font-body: var(--font-manrope), system-ui, sans-serif;
+  --font-display: var(--font-bricolage), var(--font-manrope), sans-serif;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --gutter: 20px;
+  }
+}
+
+/* ===== Base ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* sticky header */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--green-dark);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--green-hover);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ===== Shared utilities ===== */
+.hdl {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.eyebrow {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 16px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
