@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalPage, type LegalSection } from "@/components/shared/LegalPage";
 import { legal, site } from "@/content/site";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Privacy Policy",
   description: "What data Dinify collects, how the Dinify Chef uses it, who processes it and how you stay in control.",
-};
+  path: "/privacy",
+});
 
 // NOTE: written to match how the Dinify backend works today. Have it reviewed by a lawyer before launch.
 

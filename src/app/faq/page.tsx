@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
 import { FaqList } from "@/components/shared/Faq";
+import { JsonLd } from "@/components/shared/JsonLd";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Section } from "@/components/shared/Section";
 import { ButtonLink } from "@/components/ui/Button";
 import { faqGroups } from "@/content/faq";
+import { pageMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "FAQ",
-  description: "Answers to common questions about Dinify — the Chef, planning, shopping lists, pricing and your account.",
-};
+  description:
+    "Answers to common questions about Dinify — getting started, the AI Chef, family menu, meal planning, shopping lists, food budget, Telegram, ChatGPT & Claude, pricing and privacy.",
+  path: "/faq",
+});
 
 export default function FaqPage() {
   const jsonLd = {
@@ -59,7 +63,7 @@ export default function FaqPage() {
         </div>
       </Section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
+      <JsonLd data={jsonLd} />
     </>
   );
 }

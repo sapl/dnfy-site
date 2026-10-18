@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { Carrot, Citrus, ForkKnife } from "@/components/shared/Decorations";
 import { MailIcon } from "@/components/ui/Icons";
 import { site } from "@/content/site";
+import { pageMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Contact",
   description: "Questions or feedback? Write to the Dinify team at hello@dinify.me.",
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

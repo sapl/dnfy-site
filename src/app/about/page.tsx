@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
+import { pageMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "About",
   description: "A note from Alex, one of the two people who made Dinify for their own family.",
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
@@ -30,9 +32,14 @@ export default function AboutPage() {
               and I made in our spare time, for ourselves first.
             </p>
             <p>
-              In our family neither my wife nor I like cooking. My wife also has ADHD, so planning meals day after day is
-              really hard for her. But you still have to eat, so every day it was the same thing: what&apos;s for
-              dinner, what do we need to buy, who&apos;s cooking. Usually at the last minute, with stress and arguments.
+              In our family neither my wife nor I like cooking. And my wife is one of those people for whom keeping a
+              dozen small things in her head is genuinely exhausting: plans slip away, every little decision drains
+              energy, and one &quot;what&apos;s for dinner?&quot; can knock the whole evening off track. People like
+              her don&apos;t need more willpower — they need a clear schedule that makes the decisions in advance.
+            </p>
+            <p>
+              But you still have to eat, so every day it was the same thing: what&apos;s for dinner, what do we need to
+              buy, who&apos;s cooking. Usually at the last minute, with stress and arguments.
             </p>
             <p>
               We can&apos;t afford a cook or a housekeeper. Eating out or ordering food every day doesn&apos;t work

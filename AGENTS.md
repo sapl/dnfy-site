@@ -31,7 +31,8 @@ change; committing it with your work keeps the tree clean.
 - Язык сайта — **английский** (общение с пользователем и доки — на русском).
 - Тексты, цены, FAQ, навигация — в `src/content/*.ts`, а не в компонентах. Факты о продукте сверяй с `CONTEXT.md`.
 - Стили: CSS Modules + токены из `src/app/globals.css`; новых цветов и шрифтов без нужды не вводить.
-- SEO: у каждой страницы свой `metadata` (title, description); новую страницу добавляй в `src/app/sitemap.ts`.
+- SEO: у каждой страницы свой `metadata` через `pageMetadata()` из `src/lib/seo.ts` (title, description, canonical,
+  Open Graph); новую страницу добавляй в `src/app/sitemap.ts` с датой `updated`. Основной домен — `www.dinify.me`.
 - Кнопки Log In / Join ведут в приложение (`site.appUrl`), отдельной регистрации на сайте нет.
 - Проверка перед сдачей: `npm run typecheck` и `npm run build`.
 - Сайт будет пополняться (новые страницы, секции, SEO-контент). Если меняется позиционирование, тарифы или

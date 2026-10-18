@@ -67,6 +67,21 @@
 .audYes .audPhoto {
   background: #dde6e0;
 }
+/* "not for" photo is struck through with a soft white diagonal line, corner to corner */
+.audNo .audPhoto::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to top right,
+    transparent calc(50% - 3px),
+    rgba(255, 255, 255, 0.7) calc(50% - 2px),
+    rgba(255, 255, 255, 0.7) calc(50% + 2px),
+    transparent calc(50% + 3px)
+  );
+}
 .audPhoto img {
   transform: scale(1.15);
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);

@@ -28,12 +28,13 @@ export const metadata: Metadata = {
   },
   description: site.description,
   applicationName: site.name,
+  // pages add their own canonical URL and Open Graph tags via `pageMetadata` (src/lib/seo.ts)
   openGraph: {
     type: "website",
     siteName: site.name,
+    locale: "en_US",
     title: "Dinify — Family food, organized",
     description: site.description,
-    url: "/",
   },
   twitter: {
     card: "summary_large_image",

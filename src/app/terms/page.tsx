@@ -3,11 +3,13 @@ import Link from "next/link";
 import { LegalPage, type LegalSection } from "@/components/shared/LegalPage";
 import { pricingPlans } from "@/content/pricing";
 import { legal, site } from "@/content/site";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Terms of Service",
   description: "The rules for using Dinify — accounts, families, subscriptions, the AI Chef and your content.",
-};
+  path: "/terms",
+});
 
 // NOTE: written to match how the Dinify backend works today. Have it reviewed by a lawyer before launch.
 
