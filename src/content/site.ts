@@ -3,8 +3,8 @@ export const site = {
   tagline: "Family food, organized — fewer decisions, calmer days.",
   description:
     "Dinify organizes your family's meals, shopping and cooking schedule — so everyone knows what's for dinner and who's responsible.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.dinify.me",
-  appUrl: process.env.NEXT_PUBLIC_APP_URL ?? "https://app.dinify.me/",
+  url: "https://www.dinify.me",
+  appUrl: "https://app.dinify.me/",
   telegramBot: "https://t.me/dinify_bot",
   email: "hello@dinify.me",
 } as const;
