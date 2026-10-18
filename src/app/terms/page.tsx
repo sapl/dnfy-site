@@ -121,8 +121,8 @@ const sections: LegalSection[] = [
         <h3>Free plan</h3>
         <p>
           The Free plan gives you the family menu, recipes, weekly and monthly plan and shopping list. You can make
-          changes through your own AI assistant (such as ChatGPT or Claude) connected to Dinify. It may include a
-          limited trial allowance of the built-in Chef.
+          changes through your own AI assistant (such as ChatGPT or Claude) connected to Dinify; the Free plan has no
+          chat inside the Dinify app. It may include a limited trial allowance of the built-in Chef.
         </p>
 
         <h3>Base subscription</h3>
@@ -301,7 +301,7 @@ const sections: LegalSection[] = [
         <p>
           Otherwise, to the extent permitted by law, we are not liable for indirect or consequential losses, or for
           losses caused by your reliance on AI output without checking it. Our total liability to you is limited to the
-          amount you paid us in the 12 months before the claim, or €50 if you used only the Free plan.
+          amount you paid us in the 12 months before the claim, or $50 if you used only the Free plan.
         </p>
       </>
     ),

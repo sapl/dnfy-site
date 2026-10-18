@@ -18,32 +18,11 @@
   position: relative;
 }
 
-.recommended {
-  background: var(--bg-mint);
-  border: 2px solid var(--green);
-}
-
-.badge {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: var(--green);
-  color: #fff;
-  font-size: 11px;
-  font-weight: 800;
-  padding: 5px 11px;
-  border-radius: var(--r-pill);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
 
 .name {
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 6px;
-}
-.recommended .name {
-  color: var(--green-dark);
 }
 
 .priceRow {
@@ -71,8 +50,20 @@
   margin: 0 0 22px;
   line-height: 1.5;
 }
-.recommended .desc {
-  color: var(--text);
+
+.tag {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-chip);
+  color: var(--ink-2);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 11px;
+  border-radius: var(--r-pill);
 }
 
 .features {
@@ -98,24 +89,24 @@
 }
 
 .excluded {
-  color: var(--text-4) !important;
-  text-decoration: line-through;
-  text-decoration-color: var(--red);
+  color: var(--text-2);
 }
 
-.footnote {
-  font-size: 13px;
-  color: var(--text-2);
-  margin: 16px 0 0;
-  line-height: 1.5;
-}
-.footnote strong {
-  color: var(--ink);
-}
 
 .cta {
   margin-top: auto;
   padding-top: 26px;
+}
+
+.note {
+  max-width: 760px;
+  margin: 28px auto 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-2);
+}
+.note strong {
+  color: var(--ink);
 }
 
 @media (max-width: 720px) {

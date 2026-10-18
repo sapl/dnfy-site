@@ -220,7 +220,7 @@ export const faqGroups: FaqGroup[] = [
     items: [
       {
         q: "Is there a free plan?",
-        a: "Yes. Free includes the menu, recipes, weekly and monthly plan, printing and the shopping list; you edit things through your own ChatGPT or Claude. Base adds the built-in Chef chat inside Dinify — with voice and smart planning — for €3.99 per month.",
+        a: "Yes. On Free you keep your menu, plan, shopping list and spending in Dinify and edit them through your own ChatGPT or Claude; there's no chat inside the app, so changes go through that external chat. Base is $3.99 a month and adds the built-in Chef chat in the app and Telegram on top of ChatGPT and Claude — for everyday use you'll want both. The built-in chat uses a paid AI service, and the subscription covers what it costs us.",
       },
       {
         q: "Does one subscription cover the whole family?",
