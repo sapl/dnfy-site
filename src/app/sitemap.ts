@@ -7,7 +7,7 @@ const staticRoutes: { path: string; updated: string }[] = [
   { path: "/about", updated: "2026-10-18" },
   { path: "/faq", updated: "2026-10-18" },
   { path: "/contact", updated: "2026-10-17" },
-  { path: "/privacy", updated: "2026-10-16" },
+  { path: "/privacy", updated: "2026-10-20" },
   { path: "/terms", updated: "2026-10-16" },
 ];
 

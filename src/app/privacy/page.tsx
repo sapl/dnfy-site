@@ -134,6 +134,15 @@ const sections: LegalSection[] = [
           <li>an authentication cookie in the web app that keeps you signed in.</li>
         </ul>
 
+        <h3>Website analytics</h3>
+        <p>
+          On this website (not in the web app) we use Google Analytics to understand how visitors find and use the
+          site: pages viewed, how you arrived (for example from a search engine or a link), approximate location
+          (country or city), device and browser type. Google Analytics sets cookies and identifies your browser by a
+          random ID; it doesn&apos;t tell us who you are, and Google doesn&apos;t log or store your IP address. We
+          don&apos;t use this data for advertising.
+        </p>
+
         <h3>Emails to us</h3>
         <p>If you write to us, we receive your email address and whatever you include in your message.</p>
       </>
@@ -204,6 +213,11 @@ const sections: LegalSection[] = [
             <td>Keep the Service secure, fix bugs and improve features</td>
             <td>Technical information, conversations where needed to investigate a problem</td>
             <td>Legitimate interest</td>
+          </tr>
+          <tr>
+            <td>Measure website traffic and improve the website</td>
+            <td>Website analytics</td>
+            <td>Legitimate interest — you can opt out at any time (see Cookies)</td>
           </tr>
           <tr>
             <td>Answer messages you send us</td>
@@ -318,6 +332,11 @@ const sections: LegalSection[] = [
               <td>United States / EU</td>
             </tr>
             <tr>
+              <td>Google Analytics</td>
+              <td>Website traffic statistics</td>
+              <td>United States / EU</td>
+            </tr>
+            <tr>
               <td>Stripe</td>
               <td>Subscription payments</td>
               <td>United States / EU</td>
@@ -396,6 +415,10 @@ const sections: LegalSection[] = [
               <td>For a limited period needed for security and troubleshooting</td>
             </tr>
             <tr>
+              <td>Website analytics</td>
+              <td>No longer than 14 months, then deleted automatically by Google Analytics</td>
+            </tr>
+            <tr>
               <td>Messages you send us</td>
               <td>Until your request is resolved, then up to 12 months</td>
             </tr>
@@ -458,12 +481,17 @@ const sections: LegalSection[] = [
     body: (
       <>
         <p>
-          <strong>This website</strong> doesn&apos;t use advertising or analytics cookies.
+          <strong>This website</strong> doesn&apos;t use advertising cookies. It uses Google Analytics cookies
+          (<code>_ga</code> and <code>_ga_*</code>, kept for up to two years) to count visits and see which pages are
+          useful. To opt out, block cookies for this site in your browser settings or install the{" "}
+          <a href="https://tools.google.com/dlpage/gaoptout">Google Analytics opt-out add-on</a>. Learn more in{" "}
+          <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from sites
+          that use its services</a>.
         </p>
         <p>
           <strong>The web app</strong> uses one strictly necessary cookie to keep you signed in (it lasts up to six
           months, or until you log out) and your browser&apos;s local storage for interface settings. These are needed
-          for the Service to work and don&apos;t require consent. If we ever add analytics, we&apos;ll ask you first.
+          for the Service to work and don&apos;t require consent. The web app doesn&apos;t use analytics cookies.
         </p>
       </>
     ),

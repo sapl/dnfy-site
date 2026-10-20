@@ -7,11 +7,13 @@ export const site = {
   appUrl: "https://app.dinify.me/",
   telegramBot: "https://t.me/dinify_bot",
   email: "hello@dinify.me",
+  // Google Analytics 4 measurement ID
+  gaId: "G-VJK3Q1DXVY",
 } as const;
 
 /** Shown as "Last updated" on the Privacy Policy and Terms. */
 export const legal = {
-  updated: "16 October 2026",
+  updated: "20 October 2026",
 } as const;
 
 export type NavLink = { label: string; href: string };
