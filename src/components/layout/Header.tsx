@@ -1,15 +1,16 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { mainNav, routes } from "@/content/site";
+import { Link, usePathname } from "@/i18n/navigation";
 import { ButtonLink } from "@/components/ui/Button";
 import { CloseIcon, MenuIcon } from "@/components/ui/Icons";
 import { Logo } from "@/components/ui/Logo";
 import styles from "./Header.module.css";
 
 export function Header() {
+  const t = useTranslations("Nav");
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -21,22 +22,22 @@ export function Header() {
       <div className={`container ${styles.inner}`}>
         <Logo />
 
-        <nav className={styles.nav} aria-label="Main">
+        <nav className={styles.nav} aria-label={t("mainLabel")}>
           {mainNav.map((item) => {
-            const active = pathname.startsWith(item.href);
+            const active = typeof item.href === "string" && pathname.startsWith(item.href);
             return (
               <Link
-                key={item.href}
+                key={item.label}
                 href={item.href}
                 className={`${styles.link} ${active ? styles.active : ""}`}
                 aria-current={active ? "page" : undefined}
               >
-                {item.label}
+                {t(item.label)}
               </Link>
             );
           })}
           <ButtonLink href={routes.login} variant="dark" size="sm">
-            Log In
+            {t("logIn")}
           </ButtonLink>
         </nav>
 
@@ -45,7 +46,7 @@ export function Header() {
           className={styles.toggle}
           aria-expanded={open}
           aria-controls="mobile-menu"
-          aria-label={open ? "Close menu" : "Open menu"}
+          aria-label={open ? t("closeMenu") : t("openMenu")}
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <CloseIcon size={20} /> : <MenuIcon size={20} />}
@@ -53,19 +54,19 @@ export function Header() {
       </div>
 
       <div id="mobile-menu" className={styles.mobile} hidden={!open}>
-        <nav className={styles.mobileLinks} aria-label="Mobile">
+        <nav className={styles.mobileLinks} aria-label={t("mobileLabel")}>
           {mainNav.map((item) => (
-            <Link key={item.href} href={item.href}>
-              {item.label}
+            <Link key={item.label} href={item.href}>
+              {t(item.label)}
             </Link>
           ))}
         </nav>
         <div className={styles.mobileCtas}>
           <ButtonLink href={routes.login} variant="dark" size="md">
-            Log In
+            {t("logIn")}
           </ButtonLink>
           <ButtonLink href={routes.join} variant="primary" size="md">
-            Get started
+            {t("getStarted")}
           </ButtonLink>
         </div>
       </div>

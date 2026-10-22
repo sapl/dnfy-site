@@ -1,6 +1,8 @@
+import { useLocale, useTranslations } from "next-intl";
 import { Avatar } from "@/components/ui/Avatar";
 import { BagIcon, ChefHatIcon, TickIcon } from "@/components/ui/Icons";
-import { weekPlan, type PlanSlot } from "@/content/weekPlan";
+import { planDate, planRange, slotNote, weekPlan, type PlanSlot } from "@/content/weekPlan";
+import { contentLocale } from "@/i18n/routing";
 import styles from "./WeekPlanCard.module.css";
 
 function SlotThumb({ slot }: { slot: PlanSlot }) {
@@ -15,14 +17,15 @@ function SlotThumb({ slot }: { slot: PlanSlot }) {
 }
 
 function Slot({ slot }: { slot: PlanSlot }) {
+  const t = useTranslations("WeekPlan");
   return (
-    <div className={styles.slot} title={slot.hint}>
+    <div className={styles.slot} title={slot.hint && t(`dishes.${slot.hint}`)}>
       <SlotThumb slot={slot} />
       <div className={styles.text}>
-        <div className={styles.meal}>{slot.meal}</div>
-        <div className={styles.name}>{slot.title}</div>
+        <div className={styles.meal}>{t(slot.meal)}</div>
+        <div className={styles.name}>{t(`dishes.${slot.dish}`)}</div>
         <div className={`${styles.note} ${slot.noteTone && slot.noteTone !== "muted" ? styles[slot.noteTone] : ""}`}>
-          {slot.note}
+          {slotNote(slot, t)}
         </div>
       </div>
       {slot.cook && <Avatar person={slot.cook} size={22} />}
@@ -31,15 +34,18 @@ function Slot({ slot }: { slot: PlanSlot }) {
 }
 
 export function WeekPlanCard() {
+  const t = useTranslations("WeekPlan");
+  const lang = contentLocale(useLocale());
+
   return (
-    <div className={styles.card} role="img" aria-label="Example of a Dinify weekly plan">
+    <div className={styles.card} role="img" aria-label={t("ariaLabel")}>
       <div className={styles.head}>
         <div>
-          <div className={styles.label}>{weekPlan.label}</div>
-          <div className={`hdl ${styles.title}`}>Plan</div>
+          <div className={styles.label}>{t("label", { range: planRange(lang) })}</div>
+          <div className={`hdl ${styles.title}`}>{t("title")}</div>
         </div>
         <div className={styles.chips}>
-          <span className={styles.chipReady}>{weekPlan.ready} ready</span>
+          <span className={styles.chipReady}>{t("ready", { count: weekPlan.ready })}</span>
           {weekPlan.assignments.map((a) => (
             <span key={a.person} className={styles.chipPerson}>
               <Avatar person={a.person} size={26} />
@@ -50,25 +56,28 @@ export function WeekPlanCard() {
       </div>
 
       <div className={styles.days}>
-        {weekPlan.days.map((d) => (
-          <div key={d.day} className={styles.row}>
-            {d.today ? (
-              <div className={styles.today}>
-                {d.weekday}
-                <br />
-                {d.day}
-              </div>
-            ) : (
-              <div className={styles.date}>
-                {d.weekday}
-                <br />
-                <span>{d.day}</span>
-              </div>
-            )}
-            <Slot slot={d.slots[0]} />
-            <Slot slot={d.slots[1]} />
-          </div>
-        ))}
+        {weekPlan.days.map((d) => {
+          const { weekday, day } = planDate(d.date, lang);
+          return (
+            <div key={d.date} className={styles.row}>
+              {d.today ? (
+                <div className={styles.today}>
+                  {weekday}
+                  <br />
+                  {day}
+                </div>
+              ) : (
+                <div className={styles.date}>
+                  {weekday}
+                  <br />
+                  <span>{day}</span>
+                </div>
+              )}
+              <Slot slot={d.slots[0]} />
+              <Slot slot={d.slots[1]} />
+            </div>
+          );
+        })}
       </div>
     </div>
   );

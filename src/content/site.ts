@@ -1,8 +1,5 @@
 export const site = {
   name: "Dinify",
-  tagline: "Family food, organized — fewer decisions, calmer days.",
-  description:
-    "Dinify organizes your family's meals, shopping and cooking schedule — so everyone knows what's for dinner and who's responsible.",
   url: "https://www.dinify.me",
   appUrl: "https://app.dinify.me/",
   telegramBot: "https://t.me/dinify_bot",
@@ -11,40 +8,47 @@ export const site = {
   gaId: "G-VJK3Q1DXVY",
 } as const;
 
-/** Shown as "Last updated" on the Privacy Policy and Terms. */
+/** Shown as "Last updated" on the Privacy Policy and Terms, formatted for each language. */
 export const legal = {
-  updated: "20 October 2026",
+  updated: "2026-10-22",
 } as const;
 
-export type NavLink = { label: string; href: string };
+/** Section of the home page; an object so the i18n `Link` builds `/ru#pricing`, not `/ru/#pricing`. */
+const homeSection = (hash: string) => ({ pathname: "/", hash }) as const;
+
+/** Labels are keys in the `Nav` messages; hrefs get the language prefix from the i18n `Link`. */
+export type NavLink = {
+  label: "howItWorks" | "about" | "pricing" | "faq" | "contact" | "privacy" | "terms";
+  href: string | ReturnType<typeof homeSection>;
+};
 
 export const mainNav: NavLink[] = [
-  { label: "How it works", href: "/#how-it-works" },
-  { label: "About", href: "/about" },
-  { label: "Pricing", href: "/#pricing" },
-  { label: "FAQ", href: "/faq" },
+  { label: "howItWorks", href: homeSection("how-it-works") },
+  { label: "about", href: "/about" },
+  { label: "pricing", href: homeSection("pricing") },
+  { label: "faq", href: "/faq" },
 ];
 
-export const footerNav: { title: string; links: NavLink[] }[] = [
+export const footerNav: { title: "product" | "company" | "legal"; links: NavLink[] }[] = [
   {
-    title: "Product",
+    title: "product",
     links: [
-      { label: "Pricing", href: "/#pricing" },
-      { label: "FAQ", href: "/faq" },
+      { label: "pricing", href: homeSection("pricing") },
+      { label: "faq", href: "/faq" },
     ],
   },
   {
-    title: "Company",
+    title: "company",
     links: [
-      { label: "About", href: "/about" },
-      { label: "Contact", href: "/contact" },
+      { label: "about", href: "/about" },
+      { label: "contact", href: "/contact" },
     ],
   },
   {
-    title: "Legal",
+    title: "legal",
     links: [
-      { label: "Privacy Policy", href: "/privacy" },
-      { label: "Terms of Service", href: "/terms" },
+      { label: "privacy", href: "/privacy" },
+      { label: "terms", href: "/terms" },
     ],
   },
 ];
@@ -54,9 +58,9 @@ export const routes = {
   // Log In and Join both lead to the web app
   login: site.appUrl,
   join: site.appUrl,
-  chef: "/#chef",
-  howItWorks: "/#how-it-works",
-  pricing: "/#pricing",
+  chef: homeSection("chef"),
+  howItWorks: homeSection("how-it-works"),
+  pricing: homeSection("pricing"),
   about: "/about",
   contact: "/contact",
   privacy: "/privacy",

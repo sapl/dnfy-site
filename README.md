@@ -1,6 +1,8 @@
 # Dinify — marketing site
 
-Public site `dinify.me`, built with Next.js 16, React 19 and TypeScript.
+Public site `dinify.me`, built with Next.js 16, React 19 and TypeScript. Localized with next-intl
+(en, es, de, fr, ru; pt and ja show English for now): texts in `src/content/messages/*.json`, long pages in
+`src/content/pages/<locale>/*.mdx`.
 
 ## Getting started
 

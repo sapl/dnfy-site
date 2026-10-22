@@ -58,6 +58,11 @@
   --font-display: var(--font-bricolage), var(--font-manrope), sans-serif;
 }
 
+/* Bricolage has no Cyrillic, and its metric fallback (Arial) would catch Cyrillic glyphs before Manrope does */
+:root:lang(ru) {
+  --font-display: var(--font-manrope), sans-serif;
+}
+
 @media (max-width: 768px) {
   :root {
     --gutter: 20px;

@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { ButtonLink } from "@/components/ui/Button";
 import { ArrowRightIcon } from "@/components/ui/Icons";
 import { Carrot, Citrus, ForkKnife, Herb } from "@/components/shared/Decorations";
@@ -6,6 +7,7 @@ import { WeekPlanCard } from "./WeekPlanCard";
 import styles from "./Hero.module.css";
 
 export function Hero() {
+  const t = useTranslations("Hero");
   return (
     <section className={styles.hero}>
       <div className={styles.decor} aria-hidden="true">
@@ -17,22 +19,19 @@ export function Hero() {
 
       <div className={`container ${styles.inner}`}>
         <div className={styles.copy}>
-          <div className={`eyebrow ${styles.eyebrow}`}>Family food, organized</div>
-          <h1 className={`hdl ${styles.title}`}>Stop deciding what to cook every day.</h1>
-          <p className={styles.lead}>
-            Dinify organizes your family&apos;s meals, shopping and cooking schedule — so everyone knows what&apos;s for
-            dinner and who&apos;s responsible.
-          </p>
+          <div className={`eyebrow ${styles.eyebrow}`}>{t("eyebrow")}</div>
+          <h1 className={`hdl ${styles.title}`}>{t("title")}</h1>
+          <p className={styles.lead}>{t("lead")}</p>
           <div className={styles.actions}>
             <ButtonLink href={routes.join} size="lg">
-              Get started
+              {t("cta")}
             </ButtonLink>
             <ButtonLink href={routes.howItWorks} variant="ghost" size="lg">
-              See how it works
+              {t("secondary")}
               <ArrowRightIcon size={16} />
             </ButtonLink>
           </div>
-          <div className={styles.note}>Set up in a 2-minute chat — no long forms, no manual recipes.</div>
+          <div className={styles.note}>{t("note")}</div>
         </div>
 
         <div className={styles.visual}>

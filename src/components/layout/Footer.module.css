@@ -61,6 +61,18 @@
   color: rgba(255, 255, 255, 0.45);
 }
 
+.bottomEnd {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* the language menu opens upwards, aligned to the page edge it sits next to */
+.bottomEnd ul {
+  left: auto;
+  right: 0;
+}
+
 @media (max-width: 860px) {
   .grid {
     grid-template-columns: 1fr 1fr;
@@ -75,5 +87,12 @@
   .bottom {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .bottomEnd {
+    flex-direction: row-reverse;
+  }
+  .bottomEnd ul {
+    left: 0;
+    right: auto;
   }
 }

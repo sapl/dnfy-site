@@ -1,23 +1,27 @@
+import { useTranslations } from "next-intl";
 import { Carrot, Citrus, ForkKnife } from "@/components/shared/Decorations";
 import { ButtonLink } from "@/components/ui/Button";
 import styles from "./not-found.module.css";
 
 export default function NotFound() {
+  const t = useTranslations("NotFound");
   return (
     <section className={styles.wrap}>
+      <title>{`${t("metaTitle")} · Dinify`}</title>
+      <meta name="robots" content="noindex" />
       <ForkKnife className={styles.fork} />
       <Carrot className={styles.carrot} />
       <div className={styles.inner}>
         <Citrus className={styles.plate} size={110} />
-        <div className="eyebrow">404 · Page not found</div>
-        <h1 className={`hdl ${styles.title}`}>This dish isn&apos;t on the menu.</h1>
-        <p className={styles.text}>The page you&apos;re looking for has moved or never existed.</p>
+        <div className="eyebrow">{t("eyebrow")}</div>
+        <h1 className={`hdl ${styles.title}`}>{t("title")}</h1>
+        <p className={styles.text}>{t("text")}</p>
         <div className={styles.actions}>
           <ButtonLink href="/" size="lg">
-            Back to home
+            {t("home")}
           </ButtonLink>
           <ButtonLink href="/faq" variant="outline" size="lg">
-            Visit FAQ
+            {t("faq")}
           </ButtonLink>
         </div>
       </div>

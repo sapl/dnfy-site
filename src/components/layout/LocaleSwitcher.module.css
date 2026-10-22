@@ -1,0 +1,76 @@
+.switcher {
+  position: relative;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--r-pill);
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.button::-webkit-details-marker {
+  display: none;
+}
+
+.button:hover,
+.switcher[open] .button {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--green-300);
+  outline-offset: 2px;
+}
+
+.chevron {
+  transition: transform 0.15s;
+}
+
+.switcher[open] .chevron {
+  transform: rotate(180deg);
+}
+
+/* opens upwards: the switcher sits at the very bottom of the page */
+.menu {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 0;
+  z-index: 10;
+  min-width: 180px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--surface);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-card);
+}
+
+.option {
+  display: block;
+  padding: 9px 12px;
+  border-radius: var(--r-sm);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+.option:hover {
+  background: var(--bg-mint);
+  color: var(--green-dark);
+}
+
+.option[aria-current] {
+  color: var(--green-dark);
+  background: var(--bg-mint-strong);
+}

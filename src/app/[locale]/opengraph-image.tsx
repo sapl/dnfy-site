@@ -1,13 +1,18 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
-import { type PlanDay, weekPlan } from "@/content/weekPlan";
-import { ogImage } from "@/lib/seo";
+import { getTranslations } from "next-intl/server";
+import { planDate, planRange, slotNote, weekPlan } from "@/content/weekPlan";
+import { contentLocale, routing, type Locale } from "@/i18n/routing";
 
-// Link preview for every page (Telegram, messengers, social networks). Rendered once at build time.
-export const alt = ogImage.alt;
-export const size = { width: ogImage.width, height: ogImage.height };
+// Link preview for every page of a language (Telegram, messengers, social networks). Rendered at build time.
+// The alt text comes from `pageMetadata` (src/lib/seo.ts), which lists this image explicitly.
+export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 // colors mirror the tokens in globals.css
 const c = {
@@ -27,18 +32,29 @@ const c = {
 const fontFile = (pkg: string, file: string) =>
   readFile(join(process.cwd(), "node_modules/@fontsource", pkg, "files", file));
 
-export default async function Image() {
-  const [bricolage, manrope, manropeBold, logo] = await Promise.all([
-    fontFile(
-      "bricolage-grotesque",
-      "bricolage-grotesque-latin-800-normal.woff",
-    ),
-    fontFile("manrope", "manrope-latin-500-normal.woff"),
-    fontFile("manrope", "manrope-latin-700-normal.woff"),
-    readFile(join(process.cwd(), "public/images/logo.png")),
-  ]);
+export default async function Image({ params }: { params: Promise<{ locale: string }> }) {
+  const locale = (await params).locale as Locale;
+  const lang = contentLocale(locale);
+  const t = await getTranslations({ locale, namespace: "Hero" });
+  const meta = await getTranslations({ locale, namespace: "Meta" });
+  const plan = await getTranslations({ locale, namespace: "WeekPlan" });
+
+  // Bricolage has no Cyrillic: Russian headlines use Manrope ExtraBold; glyphs missing in one file fall back to the next
+  const [bricolage, bricolageExt, manrope, manropeBold, manropeCyr, manropeCyrBold, manropeCyrHeavy, logo] =
+    await Promise.all([
+      fontFile("bricolage-grotesque", "bricolage-grotesque-latin-800-normal.woff"),
+      fontFile("bricolage-grotesque", "bricolage-grotesque-latin-ext-800-normal.woff"),
+      fontFile("manrope", "manrope-latin-500-normal.woff"),
+      fontFile("manrope", "manrope-latin-700-normal.woff"),
+      fontFile("manrope", "manrope-cyrillic-500-normal.woff"),
+      fontFile("manrope", "manrope-cyrillic-700-normal.woff"),
+      fontFile("manrope", "manrope-cyrillic-800-normal.woff"),
+      readFile(join(process.cwd(), "public/images/logo.png")),
+    ]);
   const logoSrc = `data:image/png;base64,${logo.toString("base64")}`;
-  const days: PlanDay[] = weekPlan.days.slice(0, 3);
+  const days = weekPlan.days.slice(0, 3);
+  const headline = lang === "ru" ? "Manrope" : "Bricolage";
+  const title = t("title");
 
   return new ImageResponse(
     <div
@@ -84,14 +100,16 @@ export default async function Image() {
           <div
             style={{
               display: "flex",
-              fontFamily: "Bricolage",
-              fontSize: 70,
+              fontFamily: headline,
+              fontWeight: 800,
+              // translations run longer than "Stop deciding what to cook every day."
+              fontSize: title.length > 44 ? 58 : 70,
               lineHeight: 1.02,
               letterSpacing: -2,
               color: c.ink,
             }}
           >
-            Stop deciding what to cook every day.
+            {title}
           </div>
           <div
             style={{
@@ -101,8 +119,7 @@ export default async function Image() {
               color: c.text,
             }}
           >
-            Family menu, meal plan, shopping list and who cooks — run by an AI
-            Chef.
+            {meta("ogLead")}
           </div>
         </div>
 
@@ -145,11 +162,11 @@ export default async function Image() {
             color: c.muted,
           }}
         >
-          {weekPlan.label}
+          {plan("label", { range: planRange(lang) })}
         </div>
         {days.map((d) => (
           <div
-            key={d.day}
+            key={d.date}
             style={{
               display: "flex",
               gap: 14,
@@ -173,7 +190,7 @@ export default async function Image() {
                   color: d.today ? c.greenDark : c.muted,
                 }}
               >
-                {d.weekday}
+                {planDate(d.date, lang).weekday}
               </div>
               <div
                 style={{
@@ -183,7 +200,7 @@ export default async function Image() {
                   color: d.today ? c.greenDark : c.ink,
                 }}
               >
-                {d.day}
+                {planDate(d.date, lang).day}
               </div>
             </div>
             <div
@@ -219,7 +236,7 @@ export default async function Image() {
                       textOverflow: "ellipsis",
                     }}
                   >
-                    {s.title}
+                    {plan(`dishes.${s.dish}`)}
                   </div>
                   <div
                     style={{
@@ -229,7 +246,7 @@ export default async function Image() {
                       whiteSpace: "nowrap",
                     }}
                   >
-                    {s.note}
+                    {slotNote(s, plan)}
                   </div>
                 </div>
               ))}
@@ -242,8 +259,12 @@ export default async function Image() {
       ...size,
       fonts: [
         { name: "Bricolage", data: bricolage, weight: 800, style: "normal" },
+        { name: "Bricolage", data: bricolageExt, weight: 800, style: "normal" },
         { name: "Manrope", data: manrope, weight: 500, style: "normal" },
         { name: "Manrope", data: manropeBold, weight: 700, style: "normal" },
+        { name: "Manrope", data: manropeCyr, weight: 500, style: "normal" },
+        { name: "Manrope", data: manropeCyrBold, weight: 700, style: "normal" },
+        { name: "Manrope", data: manropeCyrHeavy, weight: 800, style: "normal" },
       ],
     },
   );

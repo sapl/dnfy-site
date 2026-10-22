@@ -1,0 +1,502 @@
+{
+  "Meta": {
+    "homeTitle": "Dinify — Planificador de comidas familiar y menú semanal",
+    "ogTitle": "Dinify — La comida en familia, organizada",
+    "description": "Planificador de comidas familiar: menú semanal, lista de la compra y quién cocina cada día, con un Chef de IA. Se acabó pensar qué hacer de cenar.",
+    "tagline": "La comida en familia, organizada: menos decisiones, días más tranquilos.",
+    "ogImageAlt": "Dinify — Deja de decidir cada día qué cocinar",
+    "ogLead": "Menú familiar, plan de comidas, lista de la compra y quién cocina, todo de la mano de un Chef de IA."
+  },
+  "Nav": {
+    "howItWorks": "Cómo funciona",
+    "about": "Quiénes somos",
+    "pricing": "Precios",
+    "faq": "Preguntas frecuentes",
+    "contact": "Contacto",
+    "privacy": "Política de privacidad",
+    "terms": "Términos del servicio",
+    "logIn": "Iniciar sesión",
+    "getStarted": "Empezar",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "mainLabel": "Principal",
+    "mobileLabel": "Móvil",
+    "home": "Dinify — inicio",
+    "logoAlt": "Logotipo de Dinify"
+  },
+  "Footer": {
+    "product": "Producto",
+    "company": "Empresa",
+    "legal": "Legal",
+    "rights": "© {year} Dinify. Todos los derechos reservados.",
+    "madeFor": "Hecho para familias",
+    "language": "Idioma"
+  },
+  "Hero": {
+    "eyebrow": "La comida en familia, organizada",
+    "title": "Deja de decidir cada día qué cocinar.",
+    "lead": "Dinify organiza las comidas, la compra y los turnos de cocina de tu familia, para que todos sepan qué hay de cenar y a quién le toca.",
+    "cta": "Empezar",
+    "secondary": "Mira cómo funciona",
+    "note": "Se configura con un chat de 2 minutos: sin formularios largos ni recetas a mano."
+  },
+  "WeekPlan": {
+    "ariaLabel": "Ejemplo de plan semanal en Dinify",
+    "label": "Esta semana · {range}",
+    "title": "Plan",
+    "ready": "{count} listos",
+    "lunch": "Almuerzo",
+    "dinner": "Cena",
+    "minutes": "{count} min",
+    "yourTurn": "Tu turno",
+    "cooks": "{name} cocina",
+    "restaurant": "Restaurante",
+    "delivery": "A domicilio",
+    "readyNote": "Listo",
+    "dishes": {
+      "businessLunch": "Menú del día",
+      "businessLunchHint": "Menú del día en el trabajo",
+      "tunaPasta": "Pasta con atún",
+      "lasagna": "Lasaña",
+      "salmon": "Salmón a la plancha",
+      "dinnerOut": "Cena con los Miller",
+      "risotto": "Risotto",
+      "pizza": "Pizza"
+    }
+  },
+  "Idea": {
+    "eyebrow": "De qué va Dinify en realidad",
+    "title": "No va de calorías ni de dietas.<br></br>Va de <accent>la vida real en familia</accent>.",
+    "notFor": "No es para",
+    "notForText": "Quienes <em>disfrutan</em> cocinando y buscando siempre algo nuevo que preparar.",
+    "notForAlt": "Una mujer cocinando feliz en una cocina luminosa",
+    "builtFor": "Pensado para",
+    "builtForText": "<strong>Familias</strong> con poco tiempo que aun así quieren comer rico y variado, sin el agobio de cada día.",
+    "builtForAlt": "Una familia cansada en la cocina por la noche",
+    "featuresTitle": "Cómo una buena planificación te libera días enteros",
+    "features": {
+      "split": {
+        "title": "Un reparto justo de la carga",
+        "text": "Cada comida que hay que cocinar tiene responsable: siempre ves a quién le toca."
+      },
+      "leftovers": {
+        "title": "Cocina una vez, come varios días",
+        "text": "Las sobras se planifican _a propósito_: una olla da para dos o tres días, así nada se cocina en vano ni se olvida en la nevera."
+      },
+      "eatOut": {
+        "title": "Días de restaurante y a domicilio",
+        "text": "Restaurantes y pedidos a domicilio, previstos con antelación."
+      },
+      "mealKits": {
+        "title": "Kits de comida",
+        "text": "Un directorio compartido: la comunidad propone y añade nuevos servicios para delegar todavía más."
+      }
+    }
+  },
+  "Chat": {
+    "eyebrow": "Habla, no rellenes formularios",
+    "title": "Todo pasa en una conversación con tu Chef.",
+    "lead": "Añadir un plato, planificar la semana, cambiar un detalle: solo dilo, en voz alta o por mensaje. Sin formularios, sin listas de ingredientes, sin menús por los que navegar.",
+    "memo": "Todo empieza con una charla breve sobre tu familia: quién come qué, quién cocina, cuándo pedís a domicilio. El Chef <strong>recuerda cada detalle</strong> y planifica como uno más de la casa.",
+    "messages": [
+      "Añade pasta con salmón al menú",
+      "Añadida a tu menú familiar: pasta, unos 30 minutos. ¿La pongo en el plan de esta semana?",
+      "Usa leche de coco en lugar de nata y ponla en el plan para la cena de hoy",
+      "Hecho: con leche de coco y lista para la cena de hoy. Te faltan salmón y leche de coco. ¿Los añado a la lista de la compra?"
+    ]
+  },
+  "PhoneChat": {
+    "ariaLabel": "Ejemplo de conversación con el Chef de Dinify",
+    "who": "Chef Dinify",
+    "subtitle": "Menú familiar",
+    "listening": "Escuchando…"
+  },
+  "HowItWorks": {
+    "eyebrow": "Cómo funciona",
+    "title": "La comida de tu familia, en datos que <accent>la IA no puede perder</accent>.",
+    "lead": "Dinify reúne en un solo lugar las cinco piezas vivas de la vida culinaria de tu familia.",
+    "aiTitle": "Hablas con la IA que prefieras",
+    "aiSub": "Texto, voz o una foto del tique",
+    "channels": {
+      "dinify": {
+        "name": "App de Dinify",
+        "note": "integrado"
+      },
+      "chatgpt": {
+        "name": "ChatGPT",
+        "note": "el tuyo"
+      },
+      "claude": {
+        "name": "Claude",
+        "note": "el tuyo"
+      },
+      "telegram": {
+        "name": "Telegram",
+        "note": "bot del Chef"
+      }
+    },
+    "connector": "lee y actualiza",
+    "dataLabel": "Los datos de tu familia · una única fuente de verdad",
+    "blocks": {
+      "profile": {
+        "title": "Perfil familiar",
+        "text": "Quién come, quién cocina, gustos y alergias, cada cuánto pedís a domicilio: un _resumen breve_ que la IA va afinando contigo."
+      },
+      "menu": {
+        "title": "Menú familiar",
+        "text": "Tus propios platos, no la base de datos de un desconocido. Di el nombre y la receta, el tiempo y los valores nutricionales se _completan solos_."
+      },
+      "plan": {
+        "title": "Plan semanal y mensual",
+        "text": "Almuerzos y cenas, _quién cocina_ cada uno, días de sobras y noches de comida a domicilio o restaurante."
+      },
+      "shopping": {
+        "title": "Lista de la compra",
+        "text": "Se arma a partir del plan para _hoy y mañana_, ordenada por secciones del súper y compartida con todos."
+      },
+      "spending": {
+        "title": "Gastos",
+        "text": "Compra, pedidos a domicilio y comidas fuera frente a un _presupuesto mensual_. Haz una foto al tique y queda registrado."
+      }
+    },
+    "whyTitle": "¿Por qué no preguntarle a ChatGPT sin más?",
+    "whyLead": "Un chat por sí solo no mantiene coherente el mes de una familia, y una app normal da demasiado trabajo manual. Dinify es las dos cosas a la vez.",
+    "chatOnly": {
+      "title": "Solo un chat",
+      "points": [
+        "Olvida el plan de la semana pasada y confunde las recetas",
+        "Un mes de comidas es un muro de texto, no un calendario",
+        "Tu pareja no puede verlo ni tachar cosas de la lista"
+      ]
+    },
+    "dinify": {
+      "title": "Chat + Dinify",
+      "points": [
+        "Una única fuente de verdad que se mantiene coherente todo el mes",
+        "Un calendario, una lista y un presupuesto de verdad, claros de un vistazo",
+        "Compartido con toda la familia, en cualquier dispositivo"
+      ]
+    }
+  },
+  "Story": {
+    "eyebrow": "Por qué lo creamos",
+    "quote": "Cada día era lo mismo: qué hay de cenar, qué hay que comprar, a quién le toca cocinar. Siempre a última hora, con estrés y discusiones. Así que convertí la hoja de cálculo de comidas de nuestra familia en Dinify.",
+    "author": "<name>Alex</name> · padre, ingeniero informático, uno de los dos creadores de Dinify",
+    "link": "Lee nuestra historia"
+  },
+  "Pricing": {
+    "title": "Precios",
+    "perMonth": "/ mes",
+    "perYear": "/ año",
+    "yearlyNote": "{price} al mes, facturado anualmente",
+    "billing": {
+      "label": "Periodo de facturación",
+      "monthly": "Mensual",
+      "yearly": "Anual"
+    },
+    "note": "**Por qué Base es de pago:** el chat integrado usa un servicio de IA de pago y nosotros cubrimos cada consulta.",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "description": "Dinify como base para tu chat de IA.",
+        "tag": "Solo como plugin de ChatGPT",
+        "features": [
+          "Menú, recetas, plan semanal y mensual, lista de la compra y gastos",
+          "Planifica y edita todo desde tu ChatGPT o Claude",
+          "Sin chat en la app: abre ChatGPT para hacer cambios"
+        ],
+        "cta": "Empieza gratis"
+      },
+      "base": {
+        "name": "Base",
+        "description": "Hazlo todo dentro de Dinify, sin saltar de una app a otra.",
+        "features": [
+          "Chat con el Chef en la app y en Telegram",
+          "Lista de la compra y gastos sobre la marcha",
+          "Sugerencias más acertadas: el Chef conoce a tu familia"
+        ],
+        "cta": "Elegir Base"
+      }
+    }
+  },
+  "About": {
+    "metaTitle": "Quiénes somos",
+    "metaDescription": "Unas palabras de Alex, uno de los dos creadores de Dinify, que lo hicieron primero para su propia familia.",
+    "heading": "Sobre Dinify",
+    "name": "Alex",
+    "byline": "uno de los dos creadores de Dinify"
+  },
+  "Contact": {
+    "metaTitle": "Contacto",
+    "metaDescription": "¿Dudas o sugerencias? Escribe al equipo de Dinify a hello@dinify.me.",
+    "eyebrow": "Contacto",
+    "title": "Nos encantará saber de ti.",
+    "lead": "Dudas, sugerencias, ayuda con tu cuenta o una idea para Dinify: escríbenos. Te responde una persona de verdad.",
+    "emailUs": "Escríbenos"
+  },
+  "FaqPage": {
+    "metaTitle": "Preguntas frecuentes",
+    "metaDescription": "Dudas sobre Dinify: primeros pasos, el Chef de IA, menú familiar, menú semanal, lista de la compra, presupuesto, Telegram, ChatGPT, precios y privacidad.",
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Tus dudas, resueltas.",
+    "lead": "Todo lo que quizá quieras saber antes de dejar en manos del Chef la decisión de qué hay de cenar.",
+    "tocLabel": "Secciones de preguntas frecuentes",
+    "stillTitle": "¿Te queda alguna duda?",
+    "stillText": "Escríbenos: te responde una persona de verdad, normalmente en menos de un día.",
+    "contactCta": "Contáctanos"
+  },
+  "Faq": {
+    "general": {
+      "title": "General",
+      "items": [
+        {
+          "q": "¿Qué es Dinify?",
+          "a": "Dinify es un organizador de comidas para la familia. Reúne en un solo lugar tu menú familiar, un plan de comidas semanal y mensual, quién cocina qué, la lista de la compra y lo que gastáis en comida, y lo manejas hablando con el Chef de Dinify en lugar de rellenar formularios."
+        },
+        {
+          "q": "¿Para quién es Dinify?",
+          "a": "Para familias ocupadas que quieren comida casera variada sin el agobio diario de “¿qué hay de cenar?”, sobre todo cuando una sola persona acaba planificando y cocinando todo. Si te encanta buscar recetas nuevas cada día o tienes a alguien que cocina en casa, probablemente Dinify no sea para ti: está pensado para quitarte decisiones de encima."
+        },
+        {
+          "q": "¿Es una app de recetas?",
+          "a": "No exactamente. Dinify trabaja con los platos de tu familia, los que de verdad cocináis, y no con un gran catálogo de recetas ajenas. El Chef te ayuda a apuntarlos, completar los detalles y repartirlos a lo largo del mes."
+        },
+        {
+          "q": "¿Es una app de dietas o para contar calorías?",
+          "a": "No. Dinify va de la vida real en familia: quién cocina, qué queda en la nevera, cuándo coméis fuera y cómo liberar las tardes. Cada plato muestra calorías, macronutrientes y una puntuación sencilla de equilibrio por ración, pero no hay dietas, objetivos ni seguimiento."
+        },
+        {
+          "q": "¿Funciona en el móvil?",
+          "a": "Sí. Dinify es una aplicación web que funciona en cualquier navegador moderno, en el móvil, la tableta o el ordenador. Puedes añadirla a la pantalla de inicio y se abre a pantalla completa, como una app. Todavía no hay una app aparte en App Store ni en Google Play."
+        },
+        {
+          "q": "¿En qué idiomas está disponible?",
+          "a": "La app está disponible por completo en inglés, español, alemán y ruso. El Chef te habla y escribe las recetas en el idioma de tu familia, que puedes cambiar en tu perfil."
+        }
+      ]
+    },
+    "start": {
+      "title": "Primeros pasos",
+      "items": [
+        {
+          "q": "¿Cómo me registro?",
+          "a": "Abre app.dinify.me e inicia sesión con tu cuenta de Google: ese es todo el registro. Tu familia se crea automáticamente y el Chef empieza un breve chat de configuración."
+        },
+        {
+          "q": "¿Puedo iniciar sesión sin Google?",
+          "a": "Todavía no. Por ahora, Google es la única forma de iniciar sesión."
+        },
+        {
+          "q": "¿Cómo funciona el chat de configuración?",
+          "a": "Dura unos dos minutos. El Chef te pregunta quién forma tu familia y quién suele cocinar, por alergias y alimentos que no coméis, y qué sopas y platos de diario preparáis más a menudo. Esos platos pasan directamente a tu menú familiar, así que puedes empezar a planificar enseguida."
+        },
+        {
+          "q": "¿Cómo añado a mi pareja y a mis hijos?",
+          "a": "Copia el enlace de invitación desde tu perfil y envíaselo. Inician sesión con Google desde ese enlace y se unen a tu familia; a partir de ahí, todos compartís el mismo menú, plan, lista de la compra y presupuesto."
+        },
+        {
+          "q": "¿Y si alguien deja la familia?",
+          "a": "Cualquier miembro puede salir, y quien creó la familia puede quitar miembros. Quien sale conserva su cuenta con una familia nueva y vacía; el menú y el plan compartidos se quedan con el resto de la familia."
+        }
+      ]
+    },
+    "chef": {
+      "title": "El Chef y la IA",
+      "items": [
+        {
+          "q": "¿Qué puede hacer el Chef?",
+          "a": "Añadir y editar platos, planificar un día, una semana o un mes entero, decidir quién cocina, actualizar la lista de la compra y registrar lo que gastáis en comida. Cada parte de la app tiene su propio chat con el Chef, que ya sabe lo que estás viendo: el plan, una receta o la lista."
+        },
+        {
+          "q": "¿Tengo que escribir las recetas y los ingredientes?",
+          "a": "No. Solo di el nombre del plato y el Chef completa los ingredientes, los pasos, el tiempo activo y total de cocción, para cuántos días da y los valores nutricionales por ración. Para cambiar algo, dilo con tus palabras: “hazlo sin cebolla” o “en realidad da para tres días”."
+        },
+        {
+          "q": "¿Puedo hablarle en vez de escribir?",
+          "a": "Sí. Toca el micrófono y habla: Dinify convierte tu voz en un mensaje y se lo envía al Chef. Las grabaciones de audio no se guardan."
+        },
+        {
+          "q": "¿Puedo enviar fotos?",
+          "a": "Sí. Envía una foto o una captura de una receta y el Chef la convierte en un plato de tu menú; envía un tique y registra el gasto. También puedes usar una foto como imagen de un plato. En el ordenador, pega o arrastra la imagen al chat."
+        },
+        {
+          "q": "¿El Chef recuerda a mi familia?",
+          "a": "Sí. Conoce vuestras cocinas favoritas y los alimentos que excluís, y guarda notas breves sobre la rutina y los gustos de tu familia que puedes leer en tu perfil. Si le falta algo, te lo pregunta."
+        },
+        {
+          "q": "¿Es seguro si hay alergias?",
+          "a": "El Chef tiene en cuenta los alimentos que excluís al escribir recetas y planes, pero es una IA y puede equivocarse. Si alguien tiene una alergia grave, revisa siempre los ingredientes tú mismo."
+        }
+      ]
+    },
+    "menu": {
+      "title": "Menú familiar",
+      "items": [
+        {
+          "q": "¿Qué es el menú familiar?",
+          "a": "Es la lista de platos que tu familia come de verdad, agrupados en platos principales, sopas, ensaladas, entrantes, desayunos, postres y comida “Preparada”. Todos los planes salen de este menú, así que cuantos más platos tenga, más variadas serán tus semanas."
+        },
+        {
+          "q": "¿Qué hay en la ficha de un plato?",
+          "a": "Ingredientes, pasos, tiempo activo y total de cocción, para cuántos días da, una foto y un enlace a la fuente si la hay. También ves las calorías y los macronutrientes por ración, una puntuación de equilibrio sobre 10 y cuándo lo comisteis por última vez o cuándo vuelve a estar en el plan."
+        },
+        {
+          "q": "¿Cómo edito un plato?",
+          "a": "Ábrelo y dile al Chef qué cambiar. Las fichas de los platos no tienen formularios de edición a propósito: una frase es más rápida que una docena de campos."
+        },
+        {
+          "q": "¿Qué son los platos “Preparados”?",
+          "a": "Comida que no cocinas: tu comida para llevar favorita, un restaurante, un kit de comida o algo ya hecho. Añádelos al menú una vez y podrás ponerlos en el plan como cualquier otro plato."
+        },
+        {
+          "q": "¿Puedo buscar y ordenar el menú?",
+          "a": "Sí. Busca por nombre o etiqueta, filtra por categoría o etiqueta y ordena por fecha en que se añadió, tiempo de cocción o lo saciante que es el plato."
+        }
+      ]
+    },
+    "planning": {
+      "title": "Planificación de comidas",
+      "items": [
+        {
+          "q": "¿Qué comidas planifica Dinify?",
+          "a": "El almuerzo y la cena, las comidas que exigen decidir algo cada día. El desayuno suele ser siempre igual, así que el plan queda más limpio sin él."
+        },
+        {
+          "q": "¿Puede el Chef planificarme la semana o el mes entero?",
+          "a": "Sí. Pide una semana o un mes y el Chef lo arma de una vez a partir de tu menú: sin repetir platos en la misma semana, sin abusar de las sopas, con al menos dos días a la semana sin cocinar y con restaurante o comida a domicilio cuando tu familia suele tenerlos. Por defecto solo rellena los huecos vacíos; lo que ya está planificado solo lo cambia si se lo pides."
+        },
+        {
+          "q": "¿Puedo planificar a mano?",
+          "a": "Por supuesto. En el ordenador, arrastra platos del menú a un día y un hueco, y mueve las comidas planificadas para cambiarlas de sitio o intercambiarlas. Desde la ficha de cualquier plato también puedes ponerlo en el almuerzo o la cena de hoy o de mañana con un toque."
+        },
+        {
+          "q": "¿Cómo funciona el reparto de la cocina?",
+          "a": "Cada comida que se cocina tiene un responsable. Por defecto, las comidas nuevas se asignan al cocinero principal de la familia; toca el avatar de una comida para pasársela a otra persona. Las comidas de hoy le muestran “¡Tu turno!” a quien cocina, y cuando el Chef planifica una semana reparte la cocina entre la familia."
+        },
+        {
+          "q": "¿Qué significa “cocina una vez, come varios días”?",
+          "a": "Algunos platos dan para dos o tres días. Cuando planificas uno, Dinify rellena los días siguientes en el mismo hueco con “listo: come lo que sobró”, así las sobras se comen en vez de olvidarse, y esos días no hay que cocinar."
+        },
+        {
+          "q": "¿Puedo planificar restaurantes, comida a domicilio y kits de comida?",
+          "a": "Sí. Los días de restaurante, comida a domicilio y kits de comida son huecos normales del plan, así que el calendario refleja lo que de verdad pasa y qué días te libras de la cocina."
+        },
+        {
+          "q": "¿Puedo imprimir el plan?",
+          "a": "Sí. En la vista mensual, el botón de imprimir genera un calendario limpio en blanco y negro, en A4 horizontal, pensado para la puerta de la nevera."
+        }
+      ]
+    },
+    "shopping": {
+      "title": "Lista de la compra",
+      "items": [
+        {
+          "q": "¿Cómo se arma la lista de la compra?",
+          "a": "Junto a tu lista, Dinify muestra los ingredientes de los platos planificados para hoy y mañana. Toca los que te faltan para añadirlos o pídele al Chef que se encargue. Mira solo un día por delante a propósito: la comida fresca que se compra para toda la semana a menudo acaba en la basura."
+        },
+        {
+          "q": "¿Cómo añado productos?",
+          "a": "Escribe varios a la vez separados por comas (“pan, leche, huevos”), dilos en voz alta o pídeselo al Chef. Los productos se agrupan por secciones del súper: frutas y verduras, lácteos, panadería, etc."
+        },
+        {
+          "q": "¿Toda la familia ve la misma lista?",
+          "a": "Sí. Hay una lista por familia. Ve tachando productos en la tienda y todos verán lo que ya está en el carrito."
+        },
+        {
+          "q": "¿Qué son Habituales e Historial?",
+          "a": "Lo que compras pasa al Historial. Marca con una estrella lo que compras siempre y pasará a Habituales. Dinify aprende cada cuánto compras cada producto y lo rápido que se estropea, y destaca los que ya toca volver a comprar."
+        },
+        {
+          "q": "¿Calcula cantidades?",
+          "a": "No. La lista dice “zanahorias”, no “350 g de zanahorias”: tú sabes cuánto necesita tu familia, y así la lista se lee rápido en la tienda."
+        }
+      ]
+    },
+    "spending": {
+      "title": "Gastos y presupuesto",
+      "items": [
+        {
+          "q": "¿Puedo controlar lo que gastamos en comida?",
+          "a": "Sí. Registra la compra, los restaurantes, la comida a domicilio y los kits de comida, o cualquier categoría propia, escribiendo algo como “45 compra” o enviando una foto del tique."
+        },
+        {
+          "q": "¿Cómo funciona el presupuesto?",
+          "a": "Define un presupuesto mensual para comida en tu perfil. Dinify te muestra cuánto te queda para el mes y para la semana en curso, te avisa cuando gastas más rápido de lo previsto y desglosa el mes por categorías."
+        },
+        {
+          "q": "¿Qué moneda se usa?",
+          "a": "La moneda de tu familia se define según el país que elijas en tu perfil."
+        }
+      ]
+    },
+    "channels": {
+      "title": "Telegram, ChatGPT y Claude",
+      "items": [
+        {
+          "q": "¿Puedo usar Dinify en Telegram?",
+          "a": "Sí. Vincula tu cuenta de Dinify con @dinify_bot y habla allí con el mismo Chef: planifica, añade platos, actualiza la lista de la compra o envía la foto de una receta."
+        },
+        {
+          "q": "¿Dinify me recuerda qué hay para almorzar?",
+          "a": "Si has vinculado Telegram, el bot envía a cada miembro de la familia el plan del día a las 13:00 en la zona horaria de tu familia, los días en que hay algo planificado. Por ahora no hay más notificaciones."
+        },
+        {
+          "q": "¿Puedo usar mi propio ChatGPT o Claude?",
+          "a": "Sí. Dinify se conecta a ChatGPT y Claude como conector, así que puedes consultar y editar tu menú, tu plan, tu lista de la compra y tus gastos directamente desde tu propio chat de IA. Así es como se edita en el plan Free."
+        },
+        {
+          "q": "¿Cómo conecto ChatGPT o Claude?",
+          "a": "Añade un conector personalizado con la dirección https://app.dinify.me/mcp e inicia sesión con la misma cuenta de Google que usas en Dinify. También funciona con otras apps de IA que admitan conectores MCP."
+        }
+      ]
+    },
+    "billing": {
+      "title": "Precios y privacidad",
+      "items": [
+        {
+          "q": "¿Hay un plan gratuito?",
+          "a": "Sí. Con Free guardas tu menú, tu plan, tu lista de la compra y tus gastos en Dinify y los editas desde tu propio ChatGPT o Claude; no hay chat dentro de la app, así que los cambios se hacen desde ese chat externo. Base cuesta $3.99 al mes o $39 al año y añade el chat integrado con el Chef en la app y en Telegram, además de ChatGPT y Claude: para el día a día querrás ambos. El chat integrado usa un servicio de IA de pago, y la suscripción cubre lo que nos cuesta."
+        },
+        {
+          "q": "¿Una suscripción sirve para toda la familia?",
+          "a": "Sí. El plan pertenece a la familia, no a una sola persona: todos en tu familia tienen las mismas funciones."
+        },
+        {
+          "q": "¿Cómo pago?",
+          "a": "Con tarjeta a través de Stripe. Nunca vemos los datos de tu tarjeta."
+        },
+        {
+          "q": "¿Puedo cancelar cuando quiera?",
+          "a": "Por supuesto. Puedes cancelar cuando quieras y volver a Free: tu menú, tu plan y tu lista se quedan contigo."
+        },
+        {
+          "q": "¿Qué pasa con los datos de mi familia?",
+          "a": "Solo se usan para que Dinify funcione para tu familia: nunca se venden ni se usan para publicidad. El Chef funciona con modelos de OpenAI que no se entrenan con tus datos, y los mensajes de voz no se guardan como audio. Puedes pedirnos que exportemos o eliminemos todo en cualquier momento; tienes los detalles en nuestra Política de privacidad."
+        }
+      ]
+    }
+  },
+  "Legal": {
+    "eyebrow": "Legal · Última actualización: {date}",
+    "contents": "Contenido",
+    "inShort": "En resumen"
+  },
+  "Privacy": {
+    "title": "Política de privacidad",
+    "metaDescription": "Qué datos recoge Dinify, cómo los usa el Chef de Dinify, quién los trata y cómo mantienes el control.",
+    "intro": "Los hábitos alimentarios de tu familia son algo personal. Aquí te contamos qué datos recogemos, para qué los necesitamos, quién nos ayuda a tratarlos y cómo mantienes el control."
+  },
+  "Terms": {
+    "title": "Términos del servicio",
+    "metaDescription": "Las normas de uso de Dinify: cuentas, familias, suscripciones, el Chef de IA y tu contenido.",
+    "intro": "Las normas de uso de Dinify: tu cuenta y tu familia, las suscripciones, el Chef de IA y tu contenido."
+  },
+  "NotFound": {
+    "metaTitle": "Página no encontrada",
+    "eyebrow": "404 · Página no encontrada",
+    "title": "Este plato no está en el menú.",
+    "text": "La página que buscas se ha movido o nunca existió.",
+    "home": "Volver al inicio",
+    "faq": "Ver preguntas frecuentes"
+  }
+}

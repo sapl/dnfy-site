@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { Avatar } from "@/components/ui/Avatar";
 import { BagIcon, BoxIcon, CheckIcon } from "@/components/ui/Icons";
 import type { Feature } from "@/content/features";
@@ -22,14 +23,15 @@ function FeatureIcon({ icon }: { icon: Feature["icon"] }) {
 }
 
 export function FeatureCard({ feature }: { feature: Feature }) {
+  const t = useTranslations("Idea.features");
   return (
     <div className={styles.card}>
       <div className={styles.icon}>
         <FeatureIcon icon={feature.icon} />
       </div>
-      <h3 className={`hdl ${styles.title}`}>{feature.title}</h3>
+      <h3 className={`hdl ${styles.title}`}>{t(`${feature.id}.title`)}</h3>
       <p className={styles.text}>
-        <Emphasis text={feature.text} emClassName={styles.em} />
+        <Emphasis text={t(`${feature.id}.text`)} emClassName={styles.em} />
       </p>
       {feature.tags && (
         <div className={styles.tags}>

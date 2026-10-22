@@ -1,3 +1,75 @@
+/* Monthly / Yearly switch in the card's top-right corner (same spot as `.tag`): two radio buttons */
+.billing {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-flex;
+  gap: 2px;
+  margin: 0;
+  padding: 3px;
+  border: 0;
+  border-radius: var(--r-pill);
+  background: var(--bg-chip);
+}
+
+.billingOption {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: var(--r-pill);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--text-2);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+}
+
+/* the radio stays focusable for the keyboard, the label is what you see */
+.billingOption input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.billingOption:hover {
+  color: var(--ink);
+}
+
+.billingOption:has(input:checked) {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 1px 2px rgba(20, 40, 25, 0.12);
+}
+
+.billingOption:has(input:focus-visible) {
+  outline: 2px solid var(--green);
+  outline-offset: 1px;
+}
+
+.onlyYearly {
+  display: none;
+}
+
+.card:has(input[value="yearly"]:checked) .onlyMonthly {
+  display: none;
+}
+
+.card:has(input[value="yearly"]:checked) .onlyYearly {
+  display: block;
+}
+
+.priceNote {
+  margin: -2px 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

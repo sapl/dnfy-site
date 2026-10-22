@@ -1,48 +1,39 @@
-import { site } from "./site";
-
-export type PlanFeature = { text: string; included: boolean };
+// Names, descriptions, features and buttons live in the `Pricing.plans` messages under the plan id.
 
 export type PricingPlan = {
   id: "free" | "base";
-  name: string;
   price: string;
-  period?: string;
-  description: string;
-  /** Small label in the card's top-right corner. */
-  tag?: { text: string; icon?: "chatgpt" };
-  features: PlanFeature[];
-  cta: { label: string; href: string };
+  /** Billed monthly: shows "/ month" after the price. */
+  monthly?: boolean;
+  /** Price when paid for a year at once; the plan then follows the Monthly / Yearly switch. */
+  yearlyPrice?: string;
+  /** Small label in the card's top-right corner (text in `Pricing.plans.<id>.tag`). */
+  tag?: { icon?: "chatgpt" };
+  /** Whether each feature in `Pricing.plans.<id>.features` is included, in the same order. */
+  included: boolean[];
 };
 
 export const pricingPlans: PricingPlan[] = [
   {
     id: "free",
-    name: "Free",
     price: "$0",
-    description: "Dinify as a base for your AI chat.",
-    tag: { text: "ChatGPT Plugin only", icon: "chatgpt" },
-    features: [
-      { text: "Menu, recipes, weekly & monthly plan, shopping list, spending", included: true },
-      { text: "Plan and edit everything from your ChatGPT or Claude", included: true },
-      { text: "No chat in the app — open ChatGPT to make changes", included: false },
-    ],
-    cta: { label: "Start free", href: site.appUrl },
+    tag: { icon: "chatgpt" },
+    included: [true, true, false],
   },
   {
     id: "base",
-    name: "Base",
     price: "$3.99",
-    period: "/ month",
-    description: "Do everything inside Dinify — no switching between apps.",
-    features: [
-      { text: "Chef chat in the app and Telegram", included: true },
-      { text: "Shopping list and spending on the go", included: true },
-      { text: "Sharper suggestions — the Chef knows your family", included: true },
-    ],
-    cta: { label: "Get Base", href: site.appUrl },
+    monthly: true,
+    yearlyPrice: "$39",
+    included: [true, true, true],
   },
 ];
 
-/** Shown under the plans: why Base isn't free. */
-export const pricingNote =
-  "**Why Base is paid:** the built-in chat uses a paid AI service, and we cover every request.";
+const amount = (price: string) => Number(price.replace(/[^\d.]/g, ""));
+
+/** Monthly equivalent of the yearly price ("$3.25"). */
+export function yearlyDeal(plan: PricingPlan) {
+  if (!plan.yearlyPrice) return null;
+  const year = amount(plan.yearlyPrice);
+  return { perMonth: `$${(year / 12).toFixed(2)}` };
+}

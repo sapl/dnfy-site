@@ -1,18 +1,22 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { FeatureCard } from "@/components/shared/FeatureCard";
 import { CheckIcon, CrossIcon } from "@/components/ui/Icons";
 import { planningFeatures } from "@/content/features";
 import styles from "./IdeaSection.module.css";
 
 export function IdeaSection() {
+  const t = useTranslations("Idea");
   return (
     <section className={styles.section} id="about">
       <div className={`container ${styles.inner}`}>
         <div className={styles.intro}>
-          <div className="eyebrow">What Dinify is really about</div>
+          <div className="eyebrow">{t("eyebrow")}</div>
           <h2 className={`hdl ${styles.title}`}>
-            It’s not about calories or diets.
-            <br /> It’s about <span className={styles.accent}>real family life</span>.
+            {t.rich("title", {
+              br: () => <br />,
+              accent: (chunks) => <span className={styles.accent}>{chunks}</span>,
+            })}
           </h2>
         </div>
 
@@ -21,7 +25,7 @@ export function IdeaSection() {
             <div className={styles.audPhoto}>
               <Image
                 src="/images/cooking-enthusiast.png"
-                alt="A woman happily cooking in a bright kitchen"
+                alt={t("notForAlt")}
                 fill
                 sizes="297px"
                 style={{ objectFit: "cover", objectPosition: "center 28%" }}
@@ -30,11 +34,9 @@ export function IdeaSection() {
             <div className={styles.audBody}>
               <div className={styles.audLabel}>
                 <CrossIcon size={17} />
-                Not for
+                {t("notFor")}
               </div>
-              <p>
-                People who <em>love</em> cooking and hunting for something new to make.
-              </p>
+              <p>{t.rich("notForText", { em: (chunks) => <em>{chunks}</em> })}</p>
             </div>
           </div>
 
@@ -42,7 +44,7 @@ export function IdeaSection() {
             <div className={styles.audPhoto}>
               <Image
                 src="/images/busy-family.png"
-                alt="A tired family in the kitchen in the evening"
+                alt={t("builtForAlt")}
                 fill
                 sizes="297px"
                 style={{ objectFit: "cover", objectPosition: "center 22%" }}
@@ -51,20 +53,17 @@ export function IdeaSection() {
             <div className={styles.audBody}>
               <div className={styles.audLabel}>
                 <CheckIcon size={17} />
-                Built for
+                {t("builtFor")}
               </div>
-              <p>
-                <strong>Families</strong> short on time who still want to eat varied and tasty — without the daily
-                scramble.
-              </p>
+              <p>{t.rich("builtForText", { strong: (chunks) => <strong>{chunks}</strong> })}</p>
             </div>
           </div>
         </div>
 
-        <h3 className={`hdl ${styles.subTitle}`}>How smart planning frees up whole days</h3>
+        <h3 className={`hdl ${styles.subTitle}`}>{t("featuresTitle")}</h3>
         <div className={styles.features}>
           {planningFeatures.map((f) => (
-            <FeatureCard key={f.title} feature={f} />
+            <FeatureCard key={f.id} feature={f} />
           ))}
         </div>
 

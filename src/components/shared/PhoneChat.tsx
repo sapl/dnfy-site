@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { MicIcon } from "@/components/ui/Icons";
 import styles from "./PhoneChat.module.css";
 
@@ -23,12 +24,13 @@ type Props = {
   className?: string;
 };
 
-export function PhoneChat({ messages, subtitle = "Family menu", full, className }: Props) {
+export function PhoneChat({ messages, subtitle, full, className }: Props) {
+  const t = useTranslations("PhoneChat");
   return (
     <div
       className={[styles.phone, full && styles.full, className].filter(Boolean).join(" ")}
       role="img"
-      aria-label="Example conversation with the Dinify Chef"
+      aria-label={t("ariaLabel")}
     >
       <div className={styles.btnRight} />
       <div className={styles.btnLeft1} />
@@ -37,8 +39,8 @@ export function PhoneChat({ messages, subtitle = "Family menu", full, className 
         <div className={styles.top}>
           <span className={styles.badge}>D</span>
           <div>
-            <div className={styles.who}>Dinify Chef</div>
-            <div className={styles.sub}>{subtitle}</div>
+            <div className={styles.who}>{t("who")}</div>
+            <div className={styles.sub}>{subtitle ?? t("subtitle")}</div>
           </div>
         </div>
         <div className={styles.body}>
@@ -53,7 +55,7 @@ export function PhoneChat({ messages, subtitle = "Family menu", full, className 
               {WAVE.map(([h, c], i) => (
                 <i key={i} style={{ height: h, background: c }} />
               ))}
-              <span className={styles.listening}>Listening…</span>
+              <span className={styles.listening}>{t("listening")}</span>
             </span>
             <span className={styles.mic}>
               <MicIcon size={17} />
